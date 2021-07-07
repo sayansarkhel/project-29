@@ -2,13 +2,15 @@ class Block2{
     constructor(x, y, width, height) {
         var options = {
             'restitution':0.4,
-            'friction':0.0,
-            
+            'friction':0.1
+           
         }
         this.body = Bodies.rectangle(x, y, width, height, options);
         this.width = width;
         this.height = height;
+        this.visibility=255
         World.add(world, this.body);
+
       }
       display(){
         push();
@@ -21,3 +23,4 @@ class Block2{
         pop();
       }
   }
+© 2021 GitHub, Inc.
