@@ -1,4 +1,3 @@
-
 const Engine = Matter.Engine;
 const World = Matter.World;
 const Bodies = Matter.Bodies;
@@ -83,7 +82,7 @@ function setup() {
 
 function draw() {
   rectMode(CENTER);
-  background("red");
+  background(rgb(146, 227, 102));
 
   ground.display()
   miniG.display()
@@ -127,7 +126,7 @@ function draw() {
 
   
 
-  fill("gold")
+  
     imageMode(CENTER)
     image(hexa_image,hexa.position.x,hexa.position.y,40,40)
   
@@ -144,6 +143,13 @@ function mouseDragged(){
 function mouseReleased(){
   chain.fly();
 }
+
+function keyPressed(){
+  if(keyCode===32){
+   chain.attach(hexa)
+  }
+  
+  }
 
  
 
